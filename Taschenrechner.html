@@ -1,0 +1,85 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Taschenrechner</title>
+
+
+
+<script> 
+"use strict";
+function fProdukt() {
+
+var vMultiplikant;
+var vMultiplikator;
+
+vMultiplikant = document.getElementById("idZahl1").value;
+vMultiplikator = document.getElementById("idZahl2").value;
+
+var vProdukt;
+vProdukt = vMultiplikant*vMultiplikator; 
+document.getElementById("idAusgabeHtml").innerHTML = vProdukt;
+
+}
+
+function fSumme() {
+var vSummand1;
+var vSummand2;
+
+vSummand1 = document.getElementById("idZahl1").value;
+vSummand2 = document.getElementById("idZahl2").value;
+
+var vSumme;
+vSumme = Number(vSummand1) + Number(vSummand2); 
+document.getElementById("idAusgabeHtml").innerHTML = vSumme;
+
+}
+function fDifferenz() {
+var vMinuend;
+var vSubtrahend;
+
+vMinuend = document.getElementById("idZahl1").value;
+vSubtrahend = document.getElementById("idZahl2").value;
+
+var vDifferenz;
+vDifferenz = vMinuend-vSubtrahend; 
+document.getElementById("idAusgabeHtml").innerHTML = vDifferenz;
+
+}
+function fDividend() {
+var vDividend;
+var vDivisor;
+
+vDividend = document.getElementById("idZahl1").value;
+vDivisor = document.getElementById("idZahl2").value;
+
+var vQoutient;
+vQoutient = vDividend / vDivisor; 
+document.getElementById("idAusgabeHtml").innerHTML = vQoutient;
+
+
+
+}
+
+</script>    
+</head>
+
+<body style="background-color:rgba(128, 128, 128, 0.274)">  
+    <h1>Taschenrechner</h1>
+    Zahl1: <input id="idZahl1" type="text" value=""> <br />
+    Zahl2: <input id="idZahl2" type="text" value=""> <br /><br />
+    <button onclick="fProdukt();"> * Multiplikation</button> 
+    <button onclick="fSumme();"> + Addition</button> 
+    <button onclick="fDifferenz();"> - Subtraktion</button> 
+    <button onclick="fDividend();"> : Division</button> <br /><br />
+
+    <div id="idAusgabeHtml">Bitte drücken Sie den jeweiligen Button für die Berechnung. 
+    </div>
+    
+</body>
+  
+
+
+
+
+
+</html>
